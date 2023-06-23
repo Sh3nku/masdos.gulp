@@ -1,0 +1,10 @@
+body {
+    font-family: GolosText;
+    span {
+        color: blue;
+        object-fit: cover;
+        @media ( max-width: 767px ) {
+            background-color: green;
+        }
+    }
+}
