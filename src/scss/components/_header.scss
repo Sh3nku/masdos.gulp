@@ -8,6 +8,12 @@ header {
     }
 }
 
+._open-menu header {
+    &._hidden {
+        transform: translateY( 0 );
+    }
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -24,14 +30,79 @@ header {
     }
 }
 
+.burger {
+    display: flex;
+    align-items: center;
+    transition: opacity .3s ease, visibility .3s ease;
+    @media ( max-width: 1200px ) {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: var( --white );
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+    }
+    @media ( max-width: 767px ) {
+        padding: 0 16px 16px;
+        top: 86px;
+    }
+}
+
+._open-menu {
+    .burger {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.burger-button {
+    padding: 20px;
+    display: none;
+    @media ( max-width: 1200px ) {
+        display: block;
+    }
+}
+
+.burger-button__lines {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-button__line {
+    width: 36px;
+    height: 2px;
+    background-color: var( --black );
+    &:not( :last-child ) {
+        margin-bottom: 6px;
+    }
+}
+
 .menu {
     font-size: 14px;
     line-height: 21px;
+    @media ( max-width: 1200px ) {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 32px;
+    }
     > ul {
         display: flex;
+        @media ( max-width: 1200px ) {
+            flex-direction: column;
+        }
         > li {
+            @media ( max-width: 1200px ) {
+                margin-right: 0;
+            }
             &:not( :last-child ) {
                 margin-right: 25px;
+                @media ( max-width: 1200px ) {
+                    margin-bottom: 15px;
+                }
             }
             > a {
                 text-decoration: underline rgba( 50, 50, 50, 0 );
@@ -50,6 +121,9 @@ header {
     line-height: 32px;
     font-weight: 600;
     margin: 0 31px;
+    @media ( max-width: 1200px ) {
+        margin: 0 0 20px;
+    }
     > a {
         text-decoration: underline rgba( 50, 50, 50, 0 );
         text-underline-offset: 2px;

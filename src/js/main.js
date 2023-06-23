@@ -14,4 +14,16 @@ $( function () {
 
     });
 
+    $( '.js-burger-button' ).on( 'click', function () {
+
+        let body = $( 'body' );
+
+        if ( body.hasClass( '_open-menu' ) ) {
+            body.removeClass( '_open-menu' );
+        } else {
+            body.addClass( '_open-menu' );
+        }
+
+    });
+
 });
