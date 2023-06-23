@@ -1,0 +1,13 @@
+.button {
+    background-color: var( --blue );
+    font-size: 16px;
+    line-height: 26px;
+    padding: 12px 25px;
+    color: var( --white );
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color .3s;
+    &:hover {
+        background-color: var( --blue-light );
+    }
+}

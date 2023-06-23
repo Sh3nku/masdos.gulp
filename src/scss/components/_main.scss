@@ -1,10 +1,32 @@
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     font-family: GolosText;
-    span {
-        color: blue;
-        object-fit: cover;
-        @media ( max-width: 767px ) {
-            background-color: green;
-        }
+    font-size: 18px;
+    line-height: 26px;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    color: var( --black );
+    @media ( max-width: 767px ) {
+        font-size: 14px;
+        line-height: 20px;
     }
+}
+
+.container {
+    max-width: 1234px;
+    padding: 0 32px;
+    margin: 0 auto;
+    @media ( max-width: 767px ) {
+        padding: 0 16px;
+    }
+}
+
+main {
+    flex-grow: 1;
+    margin-top: 100px;
 }
