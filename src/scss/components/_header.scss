@@ -79,6 +79,26 @@ header {
     &:not( :last-child ) {
         margin-bottom: 6px;
     }
+    &:nth-child(1),
+    &:nth-child(3) {
+        transition: transform .3s ease;
+    }
+    &:nth-child(2) {
+        transition: opacity .3s ease, visibility .3s ease;
+    }
+}
+
+._open-menu {
+    .burger-button__line:nth-child(1) {
+        transform: rotateZ(45deg) translate(7px, 6px);
+    }
+    .burger-button__line:nth-child(2) {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .burger-button__line:nth-child(3) {
+        transform: rotateZ(-45deg) translate(5px, -5px);
+    }
 }
 
 .menu {
