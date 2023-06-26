@@ -5,9 +5,16 @@
     padding: 12px 25px;
     color: var( --white );
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 3px;
     transition: background-color .3s;
+    display: inline-block;
     &:hover {
         background-color: var( --blue-light );
+    }
+    &._red {
+        background-color: var( --red );
+        &:hover {
+            background-color: var( --red-light );
+        }
     }
 }
