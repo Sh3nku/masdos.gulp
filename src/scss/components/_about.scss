@@ -1,0 +1,131 @@
+.about {
+    background: url( ../images/about-truck.png ) right bottom no-repeat;
+    padding-bottom: 190px;
+    position: relative;
+    @media ( max-width: 1600px ) {
+        background-position: right -200px bottom;
+    }
+    @media ( max-width: 1200px ) {
+        background-position: right -350px bottom;
+    }
+    @media ( max-width: 1023px ) {
+        background-position: right bottom;
+        background-size: 700px;
+        padding-bottom: 450px;
+    }
+    @media ( max-width: 767px ) {
+        background-position: right bottom;
+        background-size: 500px;
+        padding-bottom: 350px;
+    }
+    @media ( max-width: 576px ) {
+        background-position: right bottom;
+        background-size: 360px;
+        padding-bottom: 360px;
+    }
+    &__tooltip {
+        padding: 20px 25px;
+        box-shadow: 10px 10px 40px rgba( 68, 132, 255, .2 );
+        display: inline-block;
+        position: absolute;
+        top: 284px;
+        right: 578px;
+        background-color: var( --white );
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        @media ( max-width: 1600px ) {
+            right: 378px;
+        }
+        @media ( max-width: 1200px ) {
+            right: 228px;
+        }
+        @media ( max-width: 1023px ) {
+            padding: 10px 20px;
+            font-size: 14px;
+            line-height: 20px;
+            border-radius: 5px;
+            top: auto;
+            right: 422px;
+            bottom: 315px;
+        }
+        @media ( max-width: 767px ) {
+            right: 257px;
+            bottom: 215px;
+        }
+        @media ( max-width: 575px ) {
+            right: 41px;
+            bottom: 276px;
+        }
+        &:before {
+            position: absolute;
+            top: -28px;
+            left: -42px;
+            content: '';
+            display: block;
+            width: 70px;
+            height: 70px;
+            background: url( ../images/about-icon-1.svg ) center no-repeat;
+            @media ( max-width: 1023px ) {
+                top: -23px;
+                left: -28px;
+                width: 50px;
+                height: 50px;
+                background-size: 50px;
+            }
+        }
+        &:nth-child(2) {
+            top: 487px;
+            right: 638px;
+            @media ( max-width: 1600px ) {
+                right: 438px;
+            }
+            @media ( max-width: 1200px ) {
+                right: 288px;
+            }
+            @media ( max-width: 1023px ) {
+                top: auto;
+                right: 336px;
+                bottom: 205px;
+            }
+            @media ( max-width: 767px ) {
+                right: 207px;
+                bottom: 119px;
+            }
+            @media ( max-width: 575px ) {
+                right: 16px;
+                bottom: 205px;
+            }
+            &:before {
+                background-image: url( ../images/about-icon-2.svg );
+            }
+        }
+        > br {
+            @media ( max-width: 1023px ) {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        width: 570px;
+        @media ( max-width: 1023px ) {
+            width: 100%;
+        }
+        &-subtitle {
+            font-size: 20px;
+            line-height: 26px;
+            text-transform: uppercase;
+            color: var( --grey );
+            margin-bottom: 10px;
+            @media ( max-width: 1023px ) {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 5px;
+            }
+        }
+        p {
+            color: var( --grey );
+        }
+    }
+}
