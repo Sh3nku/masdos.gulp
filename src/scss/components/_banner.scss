@@ -4,8 +4,10 @@
     background-size: cover;
     color: var(--white);
     position: relative;
+    margin-top: -35px;
     @media ( max-width: 767px ) {
         height: 450px;
+        margin-top: -15px;
     }
     &__overlay {
         background-color: rgba( 75, 56, 38, .2 );
