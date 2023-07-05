@@ -69,16 +69,24 @@ h2 {
     @media ( max-width: 767px ) {
         margin: 30px 0 20px;
     }
-    /*&:before {
-        content: '';
-        position: absolute;
-        top: 28px;
-        left: -75px;
-        display: block;
-        width: 40px;
-        height: 5px;
-        background-color: var( --blue );
-    }*/
+    &._line {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: -75px;
+            display: block;
+            width: 40px;
+            height: 5px;
+            background-color: var( --blue );
+        }
+    }
+    &._white {
+        color: var( --white );
+        &:before {
+            background-color: var( --white );
+        }
+    }
 }
 
 h3 {
