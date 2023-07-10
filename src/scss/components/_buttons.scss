@@ -1,20 +1,30 @@
 .button {
     background-color: var( --blue );
     font-size: 16px;
-    line-height: 26px;
+    line-height: 130%;
     padding: 12px 25px;
     color: var( --white );
     font-weight: 600;
     border-radius: 3px;
     transition: background-color .3s;
     display: inline-block;
+    @media ( max-width: 575px ) {
+        width: 100%;
+    }
     &:hover {
         background-color: var( --blue-light );
+    }
+    &:disabled {
+        background-color: var( --grey-light );
+        pointer-events: none;
     }
     &._red {
         background-color: var( --red );
         &:hover {
             background-color: var( --red-light );
+        }
+        &:disabled {
+            background-color: var( --grey-light );
         }
     }
 }

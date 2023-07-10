@@ -68,4 +68,88 @@
         </div>
     </div>
 </section>
+
+<section class="application">
+    <div class="container">
+        <div class="application-bg"></div>
+        <div class="form-wrapper">
+            <form action="" novalidate>
+                <h2>Заполните <br class="_m">заявку <span>на перевозку</span></h2>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+
+                <div class="row">
+                    <div class="col-m-4">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <input type="text" name="fio" placeholder=" ">
+                                <label>ФИО</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-m-4">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <input type="email" name="email" placeholder=" ">
+                                <label>Email</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-m-4">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <input type="tel" name="phone" placeholder=" ">
+                                <label>Номер телефона</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-m-6">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <input type="text" name="from" placeholder=" ">
+                                <label>Откуда</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-m-6">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <input type="text" name="to" placeholder=" ">
+                                <label>куда</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-input">
+                            <div class="container-placeholder">
+                                <textarea name="comment" placeholder=" "></textarea>
+                                <label>Комментарий</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-footer">
+                            <div>
+                                <input type="submit" class="button _red" value="Отправить" data-check_button="privacy_button" disabled>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name="privacy" id="Privacy" class="js-check-button" data-target="privacy_button">
+                                <label for="Privacy">
+                                    <p>Соглашаюсь на обработку моих персональных данных в соответствии с <a href="https://ya.ru" target="_blank">Политикой конфиденциальности</a> и принимаю условия <a href="https://ya.ru" target="_blank">Пользовательского соглашения</a></p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
 @@include('html/footer.html')

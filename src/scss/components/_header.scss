@@ -104,10 +104,9 @@ header {
 
 .menu {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 130%;
     @media ( max-width: 1200px ) {
         font-size: 16px;
-        line-height: 21px;
         margin-bottom: 32px;
     }
     > ul {

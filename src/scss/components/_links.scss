@@ -4,7 +4,7 @@
 
 .links__subtitle {
     font-size: 24px;
-    line-height: 31px;
+    line-height: 130%;
     font-weight: 600;
     margin-bottom: 30px;
     @media ( max-width: 767px ) {
@@ -16,10 +16,9 @@
 
 .links__list {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 130%;
     @media ( max-width: 767px ) {
         font-size: 14px;
-        line-height: 18px;
     }
     > li {
         &:not( :last-child ) {

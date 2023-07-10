@@ -26,4 +26,23 @@ $( function () {
 
     });
 
+    $( '.js-check-button' ).on( 'change', function () {
+
+        let target_id = $( this ).data( 'target' ),
+            button = $( '[data-check_button="' + target_id + '"]' );
+
+        if ( $( this ).prop( 'checked' ) === true ) {
+            button.prop( 'disabled', false );
+        } else {
+            button.prop( 'disabled', true );
+        }
+
+    });
+
+    $( document ).on( 'submit', 'form[novalidate]', function ( e ) {
+
+        e.preventDefault();
+
+    });
+
 });

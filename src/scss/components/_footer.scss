@@ -3,6 +3,9 @@ footer {
     @media ( max-width: 767px ) {
         margin-top: 35px;
     }
+    &._no-margin {
+        margin-top: 0;
+    }
 }
 
 .footer__line {
@@ -10,7 +13,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 130%;
     &:first-child {
         margin-top: 63px;
         @media ( max-width: 767px ) {

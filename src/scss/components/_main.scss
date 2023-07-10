@@ -6,14 +6,13 @@ body {
     height: 100%;
     font-family: GolosText;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 140%;
     min-width: 360px;
     display: flex;
     flex-direction: column;
     color: var( --black );
     @media ( max-width: 767px ) {
         font-size: 14px;
-        line-height: 20px;
     }
 }
 
@@ -50,19 +49,18 @@ section {
 
 h1 {
     font-size: 64px;
-    line-height: 77px;
+    line-height: normal;
     font-weight: 700;
     margin-bottom: 40px;
     @media ( max-width: 767px ) {
         font-size: 32px;
-        line-height: 39px;
         margin-bottom: 30px;
     }
 }
 
 h2 {
     font-size: 48px;
-    line-height: 62px;
+    line-height: 130%;
     font-weight: 700;
     position: relative;
     margin: 40px 0 20px;
@@ -87,37 +85,56 @@ h2 {
             background-color: var( --white );
         }
     }
+    > span {
+        color: var( --blue );
+        display: block;
+    }
 }
 
 h3 {
     font-size: 36px;
-    line-height: 43px;
+    line-height: 120%;
     font-weight: 600;
     margin: 20px 0 10px;
     @media ( max-width: 767px ) {
         font-size: 24px;
-        line-height: 29px;
     }
 }
 
 h4 {
     font-size: 24px;
-    line-height: 29px;
+    line-height: 120%;
     font-weight: 600;
     margin: 20px 0 10px;
     @media ( max-width: 767px ) {
         font-size: 20px;
-        line-height: 24px;
     }
 }
 
 .text-content {
+    a {
+        color: var( --blue );
+        text-decoration: underline #387EF6;
+        text-underline-offset: 2px;
+        transition: text-decoration .3s ease;
+        &:hover {
+            text-decoration-color: rgba(56, 126, 246, 0);
+        }
+    }
     p {
         margin-bottom: 20px;
     }
+    br {
+        &._m {
+            display: none;
+            @media ( max-width: 767px ) {
+                display: block;
+            }
+        }
+    }
     blockquote {
         font-size: 24px;
-        line-height: 34px;
+        line-height: 140%;
         font-weight: 600;
         margin: 30px 0 30px;
         background-color: rgba( 249, 250, 255, 1 );
@@ -125,7 +142,6 @@ h4 {
         border-left: 4px solid var( --blue );
         @media ( max-width: 767px ) {
             font-size: 18px;
-            line-height: 25px;
         }
     }
     ul:not([class]) {
@@ -172,7 +188,7 @@ h4 {
                 left: -30px;
                 background-color: rgba(221, 233, 254, 1);
                 font-size: 13px;
-                line-height: 16px;
+                line-height: 120%;
                 font-weight: 600;
                 color: var( --blue );
                 border-radius: 50%;

@@ -1,0 +1,23 @@
+.application {
+    background: url( ../images/application-bg.png ) no-repeat center;
+    background-size: cover;
+    &-bg {
+        background: url( ../images/form-bg.png ) no-repeat center;
+        width: 369px;
+        height: 350px;
+        position: absolute;
+        top: -110px;
+        right: 22px;
+        @media ( max-width: 767px ) {
+            top: -40px;
+            right: 0;
+            background-position: center right -20px;
+            background-size: 200px;
+            width: 192px;
+            height: 200px;
+        }
+    }
+    > .container {
+        position: relative;
+    }
+}

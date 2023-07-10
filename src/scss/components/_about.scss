@@ -33,7 +33,7 @@
         background-color: var( --white );
         border-radius: 10px;
         font-size: 16px;
-        line-height: 22px;
+        line-height: 140%;
         font-weight: 600;
         @media ( max-width: 1600px ) {
             right: 378px;
@@ -44,7 +44,6 @@
         @media ( max-width: 1023px ) {
             padding: 10px 20px;
             font-size: 14px;
-            line-height: 20px;
             border-radius: 5px;
             top: auto;
             right: 422px;
@@ -114,13 +113,12 @@
         }
         &-subtitle {
             font-size: 20px;
-            line-height: 26px;
+            line-height: 130%;
             text-transform: uppercase;
             color: var( --grey );
             margin-bottom: 10px;
             @media ( max-width: 1023px ) {
                 font-size: 16px;
-                line-height: 21px;
                 margin-bottom: 5px;
             }
         }
