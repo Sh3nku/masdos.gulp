@@ -41,6 +41,18 @@ textarea {
     &:not(:placeholder-shown) {
         border: 1px solid var( --blue );
     }
+    &._right-icon {
+        background-position: center right 20px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        padding-right: 40px;
+    }
+    &._svg-application-from {
+        background-image: url( ../images/sprite.svg#application-from );
+    }
+    &._svg-application-to {
+        background-image: url( ../images/sprite.svg#application-to );
+    }
 }
 
 textarea {

@@ -1,5 +1,9 @@
 $( function () {
 
+    document.querySelectorAll( 'input[type=tel]' ).forEach( e => IMask( e, {
+        mask: '+{7} ( 000 ) 000-00-00'
+    }));
+
     let lastscrolltop = 0;
 
     $( window ).on( 'scroll', function () {
