@@ -152,4 +152,239 @@
     </div>
 </section>
 
+<section class="map-wrapper">
+    <div class="map" id="Map"></div>
+    <div class="contact-wrapper">
+        <div class="contact">
+            <div class="contact-title">Адреса офисов</div>
+
+            <div class="contact__list">
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 8,
+                    'lat': 54.708264,
+                    'lon': 20.578598
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 4,
+                    'lat': 54.708264,
+                    'lon': 20.578598
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 3,
+                    'lat': 54.740932,
+                    'lon': 20.472794
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 6,
+                    'lat': 54.740932,
+                    'lon': 20.472794
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 1,
+                    'lat': 54.725592,
+                    'lon': 20.501971
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 7,
+                    'lat': 54.703286,
+                    'lon': 20.498639
+                })
+
+                @@include('html/contact_card.html',{
+                    'title': 'г. Омск, Горького 245, офис 23',
+                    'phone': '+7 (4012) 50-72-63',
+                    'email': 'email@masdos.ru',
+                    'img': '../images/tmp-contact-1.jpg',
+                    'baloon_id': 9,
+                    'lat': 54.651735,
+                    'lon': 20.545890
+                })
+            </div>
+        </div>
+    </div>
+
+    <script>
+        ymaps.ready( init );
+        var myMapFooterContact, myFooterPlacemark;
+
+        function init () {
+
+            myMapFooterContact = new ymaps.Map( 'Map', {
+                center: [54.701227, 20.448599],
+                zoom: 11,
+                controls: ['zoomControl', 'geolocationControl', 'typeSelector']
+            });
+
+            myMapFooterContact.behaviors.disable('scrollZoom');
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.708264, 20.578598],
+                {
+                    baloon_id: '8',
+                    balloonContent: '<b>ТЦ "Гиант"</b><br /><u>Адрес:</u> г. Калининград, Московский пр-т, 255, 1 этаж<br /><u>Телефон:</u> +7(4012) 50-72-63<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-19:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.708264, 20.578598],
+                {
+                    baloon_id: '4',
+                    balloonContent: '<b>ТЦ "Гиант"</b><br /><u>Адрес:</u> г. Калининград, Московский пр-т, 255, 2 этаж<br /><u>Телефон:</u> +7(4012) 50-76-36<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-19:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.740932, 20.472794],
+                {
+                    baloon_id: '3',
+                    balloonContent: '<b>ТЦ "Балтламинат"</b><br /><u>Адрес:</u> г. Калининград, Советский пр-т, 125<br /><u>Телефон:</u> +7 (4012) 50-76-43<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-20:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.740932, 20.472794],
+                {
+                    baloon_id: '6',
+                    balloonContent: '<b>ТЦ "Балтламинат" 2</b><br /><u>Адрес:</u> г. Калининград, Советский пр-т, 125<br /><u>Телефон:</u> +7 (4012) 50-76-48<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-20:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.725592, 20.501971],
+                {
+                    baloon_id: '1',
+                    balloonContent: '<b>ТЦ "Мега центр"</b><br /><u>Адрес:</u> г. Калининград ул. Генерал-лейтенанта Озерова, 17Б<br /><u>Телефон:</u> +7 (908) 290-12-18<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-20:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.742273, 20.499321],
+                {
+                    baloon_id: '2',
+                    balloonContent: '<b>ТЦ "Балтийская галерея"</b><br /><u>Адрес:</u> г. Калининград ул. Нарвская, 112<br /><u>Телефон:</u> +7 (4012) 50-76-68<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-вс 10:00-20:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.703286, 20.498639],
+                {
+                    baloon_id: '7',
+                    balloonContent: '<b>ТЦ "Полоцкая"</b><br /><u>Адрес:</u> г. Калининград,ул. Полоцкая, 45<br /><u>Телефон:</u> +7(4012) 50-76-38<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-пт 10:00-19:00<br />сб-вс 10:00-18:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.geoObjects.add( myFooterPlacemark );
+
+
+            myFooterPlacemark = new ymaps.Placemark(
+                [54.651735,  20.545890],
+                {
+                    baloon_id: '9',
+                    balloonContent: '<b>Мебельная фабрика</b><br /><u>Адрес:</u> Загородная ул., 4, поселок Дружный<br /><u>Телефон:</u> +7 (4012) 50-76-86<br /><u>Электронная почта:</u> sale@art-flex.net<br /><u>Время работы:</u><br />пн-пт 09:00–18:00'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/placemark.png',
+                    iconImageSize: [70, 70],
+                    iconImageOffset: [-35, -70]
+                }
+            );
+
+            myMapFooterContact.setBounds( myMapFooterContact.geoObjects.getBounds() );
+
+            let position = myMapFooterContact.getGlobalPixelCenter(),
+                pos = position[0];
+
+            if ( document.documentElement.clientWidth > 767 ) {
+                pos = pos + 300
+            }
+
+            myMapFooterContact.setGlobalPixelCenter([ pos, position[1] ]);
+
+        }
+    </script>
+</section>
+
 @@include('html/footer.html')

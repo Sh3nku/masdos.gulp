@@ -49,4 +49,38 @@ $( function () {
 
     });
 
+    $( '.js-show-on-map' ).on( 'click', function () {
+
+        $( 'html,body' ).stop().animate({
+            scrollTop: $('#Map').offset().top - 100
+        }, 300);
+
+        var id = $( this ).attr( 'data-id' ),
+            lat = +$( this ).attr( 'data-lat' ),
+            lng = +$( this ).attr( 'data-lon' ),
+            placemark;
+
+        myMapFooterContact.geoObjects.each( function( geoObject ) {
+            if ( geoObject.properties.get( 'baloon_id' ) == id ) {
+                placemark = geoObject;
+            }
+        });
+
+        myMapFooterContact.panTo([lat,lng], {
+
+            flying: true,
+            duration: 600
+
+        }).then(function () {
+
+            myMapFooterContact.setCenter([lat,lng], 15);
+
+            var position = myMapFooterContact.getGlobalPixelCenter();
+            myMapFooterContact.setGlobalPixelCenter([ position[0] + 400, position[1] ]);
+
+            placemark.balloon.open();
+        }, this);
+
+    })
+
 });
